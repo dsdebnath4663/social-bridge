@@ -7,50 +7,6 @@ body {
   background-color: #fff !important;
 }
 
-@media (max-width: 991px) {
-  /* This targets devices smaller than 992px (tablets, mobiles) */
-
-  /* Center the navbar-toggler button */
-  .navbar-light .navbar-toggler {
-    position: absolute;
-    left: 37%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1; /* Keep it above other elements */
-  }
-
-  /* Prevent collapse content from affecting the toggler */
-  .navbar-collapse {
-    position: absolute; /* Ensure collapse content doesn't push the toggler down */
-    top: 100%; /* Align the content properly */
-    left: 0;
-    width: 100%;
-    background-color: #fff !important;
-  }
-
-  .dropdown-toggle::after {
-    position: absolute;
-    right: 18px;
-  }
-  .border-btm {
-    border-bottom: var(--bs-border-width) var(--bs-border-style)
-      var(--bs-border-color) !important;
-  }
-  .form-padding {
-    padding-left: 1.5rem; /* equivalent to px-4 */
-    padding-right: 1.5rem; /* equivalent to px-4 */
-    padding-top: 0.75rem; /* equivalent to pt-3 */
-  }
-  .custom-li {
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-  }
-}
-
 .toggle-icon {
   display: inline-block;
   width: 1.5em;
@@ -67,59 +23,7 @@ body {
   height: 2.5rem;
   width: 2.5rem;
 }
-/* Hide the dropdown by default */
-.dropdown-menu {
-  display: none;
-}
 
-/* Apply the hover effect for larger screens (desktop/laptop) */
-@media (min-width: 768px) {
-  .nav-item.dropdown:hover .dropdown-menu {
-    display: block;
-  }
-
-  /* Optional: Adjust the dropdown position */
-  .nav-item.dropdown:hover .dropdown-menu {
-    display: block;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 1000;
-  }
-
-  /* Custom slideInDown effect */
-  @keyframes customSlideInDown {
-    0% {
-      opacity: 0;
-      transform: translateY(-100%); /* Start off-screen from the top */
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0); /* End at the normal position */
-    }
-  }
-
-  /* Apply the custom animation */
-  .custom-slide-in-down {
-    animation: customSlideInDown 1s ease-out; /* 1s duration, can adjust for speed */
-    opacity: 0; /* Start as invisible */
-  }
-}
-
-@media (min-width: 992px) {
-  .navbar .nav-item .dropdown-menu {
-    display: block;
-    top: calc(100% - 15px);
-    margin-top: 0;
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.5s;
-  }
-
-  .navbar .nav-item:hover .dropdown-menu {
-    top: 100%;
-    visibility: visible;
-    transition: 0.5s;
-    opacity: 1;
-  }
+main {
+  padding-top: calc(1.5rem + 56px);
 }

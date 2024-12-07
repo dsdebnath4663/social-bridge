@@ -1,16 +1,6 @@
-import logo from './logo.svg';
-import './App.css';
-
-import { HiOutlineSpeakerphone } from "react-icons/hi";
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
-
-import { LuMessageSquareQuote } from "react-icons/lu";
 import { useState } from 'react';
 
-function Landing() {
-
+function HeaderModule() {
   // State to track whether the navbar is toggled or not
   const [isNavOpen, setIsNavOpen] = useState(false);
 
@@ -24,7 +14,7 @@ function Landing() {
         <div class="container">
           <a class="btn btn-primary me-2" href="#" role="button"><i class="bi bi-megaphone-fill"></i></a>
 
-          <a class="btn bg-light navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded={isNavOpen ? "true" : "false"} aria-label="Toggle navigation" onClick={handleToggle}  // Handle toggle click
+          <a class="btn bg-light navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded={isNavOpen ? "true" : "false"} aria-label="Toggle navigation" onClick={handleToggle} // Handle toggle click
           >
             <span className={` toggle-icon pt-1 ${isNavOpen ? '<i class="bi bi-x-lg fs-4"></i>' : '<i class="bi bi-list "></i>'}`}></span>
 
@@ -92,10 +82,8 @@ function Landing() {
       </nav>
 
 
-    </header >
-
+    </header>
   );
 }
 
-export default Landing;
-
+export default HeaderModule;
