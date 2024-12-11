@@ -27,3 +27,7 @@ body {
 main {
   padding-top: calc(1.5rem + 56px);
 }
+
+.bg-light {
+  background-color: #eef0f2 !important;
+}
