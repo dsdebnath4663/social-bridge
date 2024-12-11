@@ -35,6 +35,15 @@
     animation: customSlideInDown 1s ease-out; /* 1s duration, can adjust for speed */
     opacity: 0; /* Start as invisible */
   }
+  .left-bar .offcanvas {
+    position: static;
+    visibility: visible !important;
+    background-color: transparent !important;
+    -webkit-transform: none !important;
+  }
+  .offcanvas.offcanvas-start {
+    border: none !important;
+  }
 }
 
 @media (max-width: 991px) {
@@ -109,14 +118,28 @@
     display: block; /* Ensure the card is displayed */
   }
 }
-/* Default: Hide on smaller screens */
-.hide-on-large {
-  display: block !important; /* Hidden by default */
+
+.mh-100 {
+  background-image: url(https://social.webestica.com/assets/images/bg/01.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 50px;
 }
 
-/* Show on medium and larger devices (768px and above) */
-@media (min-width: 768px) {
-  .hide-on-large {
-    display: none !important; /* Make it visible on medium and larger screens */
-  }
+.profile-pic img {
+  height: 4rem;
+  width: 4rem;
+  margin-top: -39px;
+}
+
+.font {
+  position: relative !important;
+  margin-top: -6px !important;
+  display: block !important;
+}
+
+.mt-minus-3 {
+  position: relative !important;
+  margin-top: -3px !important;
 }
