@@ -31,3 +31,7 @@ main {
 .bg-light {
   background-color: #eef0f2 !important;
 }
+
+.list-style-none {
+  list-style: none;
+}
