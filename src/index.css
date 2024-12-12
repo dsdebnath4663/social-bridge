@@ -24,14 +24,42 @@ body {
   width: 2.5rem;
 }
 
+.icon-rounded-circle {
+  height: 3rem;
+  width: 3rem;
+  padding: 0.1rem;
+}
+
 main {
   padding-top: calc(1.5rem + 56px);
 }
 
 .bg-light {
-  background-color: #eef0f2 !important;
+  background-color: #eff2f6 !important;
 }
 
 .list-style-none {
   list-style: none;
+}
+
+.flip-horizontal {
+  transform: scaleX(-1);
+  display: inline-block; /* Ensure inline elements like icons respect the transform */
+}
+
+.no-resize {
+  resize: none;
+}
+.custom-textarea {
+  min-height: calc(
+    1.5em + 1rem + 2px
+  ) !important; /* Dynamic height calculation */
+}
+.custom-textarea::placeholder {
+  color: var(--bs-tertiary-color) !important; /* Use a Bootstrap theme color */
+  opacity: 0.75 !important; /* Adjust opacity for visibility */
+}
+
+.nested-comment .list-group-item {
+  padding: 0 !important;
 }
