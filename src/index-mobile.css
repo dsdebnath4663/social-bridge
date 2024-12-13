@@ -51,33 +51,22 @@
   .position-absolute-desktop {
     position: absolute;
   }
-  .translate-middle-desktop {
+  /* .translate-middle-desktop {
     transform: translate(-50%, -50%) !important;
-  }
+  } */
   .dropdown .sub-menu {
-    margin-left: 240px !important;
-    top: 45px;
+    margin-left: 100% !important;
+    top: -5px !important;
     display: none !important;
   }
 
   .sub-menu-dropdown:hover .sub-menu {
     display: block !important;
-    content: "2";
-  }
-  .position-relative-desktop {
-    position: relative;
-  }
-  .position-absolute-desktop {
-    position: absolute;
-  }
-  .translate-middle-desktop {
-    transform: translate(-50%, -50%) !important;
   }
 }
+/* This targets devices smaller than 992px (tablets, mobiles) */
 
 @media (max-width: 991px) {
-  /* This targets devices smaller than 992px (tablets, mobiles) */
-
   /* Center the navbar-toggler button */
   .navbar-light .navbar-toggler {
     position: absolute;

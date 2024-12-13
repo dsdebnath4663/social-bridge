@@ -8,6 +8,10 @@ function HeaderModule() {
   const handleToggle = () => {
     setIsNavOpen(!isNavOpen);
   };
+
+  const handleSubmenuClick = (event) => {
+    event.stopPropagation(); // Prevent closing of the parent dropdown
+  };
   return (
     <header className="navbar-light fixed-top header-static">
       <nav className="navbar navbar-expand-lg bg-white">
@@ -32,27 +36,34 @@ function HeaderModule() {
 
               <li className="nav-item dropdown  border-btm  custom-li ">
                 <a className="nav-link dropdown-toggle fw-semibold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
+                  Pages
                 </a>
                 <ul className="dropdown-menu bg-white  border border-0 shadow-sm p-3 mb-5  rounded">
-                  <li>
-                    <a className="dropdown-item" href="#">Home default</a>
+                  <li class="sub-menu-dropdown dropdown position-relative-desktop">
+                    <a className="dropdown-item dropdown-toggle  1nav-link dropdown-toggle fw-semibold " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" onClick={handleSubmenuClick}
+                    >  Profile</a>
+                    <ul className="position-absolute-desktop  translate-middle-desktop dropdown-menu sub-menu 
+                    dropdown-menu bg-white  border border-0 shadow-sm p-3 mb-5  rounded">
+                      <li class="dropdown"><a className="dropdown-item" href="#">Feed </a></li>
+                      <li class="dropdown"><a className="dropdown-item" href="#">About </a></li>
+                      <li class="dropdown"><a className="dropdown-item" href="#">Connections </a></li>
+                      <li class="dropdown"><a className="dropdown-item" href="#">Media </a></li>
+                      <li class="dropdown"><a className="dropdown-item" href="#">Videos </a></li>
+                      <li class="dropdown"><a className="dropdown-item" href="#">Events </a></li>
+                      <li class="dropdown"><a className="dropdown-item" href="#">Activity </a></li>
+
+
+                    </ul>
                   </li>
-                  <li><a className="dropdown-item" href="#">Home classic</a></li>
                   <li><a className="dropdown-item" href="#">Home post</a></li>
-                  <li><a className="dropdown-item" href="#">Home video</a></li>
-                  <li><a className="dropdown-item" href="#">Home event</a></li>
-                  <li><a className="dropdown-item" href="#">Landing page</a></li>
-                  <li><a className="dropdown-item" href="#">App download</a></li>
+
+
                 </ul>
-
-
               </li>
 
-
-
             </ul>
-            {/* <!-- Multilevel Dropdown --> */}
+            {/* <
+            !-- Multilevel Dropdown --> */}
 
             {/* <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item dropdown">
@@ -107,10 +118,10 @@ function HeaderModule() {
           </ul>
 
         </div>
-      </nav>
+      </nav >
 
 
-    </header>
+    </header >
   );
 }
 
