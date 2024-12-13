@@ -64,6 +64,15 @@
     display: block !important;
     content: "2";
   }
+  .position-relative-desktop {
+    position: relative;
+  }
+  .position-absolute-desktop {
+    position: absolute;
+  }
+  .translate-middle-desktop {
+    transform: translate(-50%, -50%) !important;
+  }
 }
 
 @media (max-width: 991px) {
@@ -112,7 +121,7 @@
     width: 260px !important;
   }
 
-  .navbar .nav-item .dropdown-menu {
+  /* .navbar .nav-item .dropdown-menu {
     display: block;
     top: calc(100% - 15px);
     margin-top: 0;
@@ -126,7 +135,7 @@
     visibility: visible;
     transition: 0.5s;
     opacity: 1;
-  }
+  } */
   .btn,
   .fw-bold,
   .offcanvas {
