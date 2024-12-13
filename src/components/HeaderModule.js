@@ -44,14 +44,13 @@ function HeaderModule() {
                     >  Profile</a>
                     <ul className="position-absolute-desktop  translate-middle-desktop dropdown-menu sub-menu 
                     dropdown-menu bg-white  border border-0 shadow-sm p-3 mb-5  rounded">
-                      <li class="dropdown"><a className="dropdown-item" href="#">Feed </a></li>
-                      <li class="dropdown"><a className="dropdown-item" href="#">About </a></li>
-                      <li class="dropdown"><a className="dropdown-item" href="#">Connections </a></li>
-                      <li class="dropdown"><a className="dropdown-item" href="#">Media </a></li>
-                      <li class="dropdown"><a className="dropdown-item" href="#">Videos </a></li>
-                      <li class="dropdown"><a className="dropdown-item" href="#">Events </a></li>
-                      <li class="dropdown"><a className="dropdown-item" href="#">Activity </a></li>
-
+                      <li class="dropdown"><a className="dropdown-item" href="/feed">Feed </a></li>
+                      <li class="dropdown"><a className="dropdown-item" href="/about">About </a></li>
+                      <li class="dropdown"><a className="dropdown-item" href="/connections">Connections </a></li>
+                      <li class="dropdown"><a className="dropdown-item" href="/media">Media </a></li>
+                      <li class="dropdown"><a className="dropdown-item" href="/videos">Videos </a></li>
+                      <li class="dropdown"><a className="dropdown-item" href="/events">Events </a></li>
+                      <li class="dropdown"><a className="dropdown-item" href="/activity">Activity </a></li>
 
                     </ul>
                   </li>
