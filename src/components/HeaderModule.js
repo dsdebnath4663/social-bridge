@@ -28,14 +28,16 @@ function HeaderModule() {
                 <i className="bi bi-search"></i>
               </button>
             </form>
-            <ul className="navbar-nav ms-auto mb-2 mb-lg-0 ">
+            {/* <ul className="navbar-nav ms-auto mb-2 mb-lg-0 ">
 
-              <li className="nav-item dropdown  border-btm  custom-li">
+              <li className="nav-item dropdown  border-btm  custom-li ">
                 <a className="nav-link dropdown-toggle fw-semibold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Dropdown
                 </a>
-                <ul className="dropdown-menu bg-light  ">
-                  <li><a className="dropdown-item" href="#">Home default</a></li>
+                <ul className="dropdown-menu bg-white  border border-0 shadow-sm p-3 mb-5  rounded">
+                  <li>
+                    <a className="dropdown-item" href="#">Home default</a>
+                  </li>
                   <li><a className="dropdown-item" href="#">Home classic</a></li>
                   <li><a className="dropdown-item" href="#">Home post</a></li>
                   <li><a className="dropdown-item" href="#">Home video</a></li>
@@ -43,10 +45,34 @@ function HeaderModule() {
                   <li><a className="dropdown-item" href="#">Landing page</a></li>
                   <li><a className="dropdown-item" href="#">App download</a></li>
                 </ul>
+
+
               </li>
 
 
 
+            </ul> */}
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              {/* <!-- Multilevel Dropdown --> */}
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle fw-semibold" href="#" id="dropdownMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
+                  <li><a class="dropdown-item" href="#">Home default</a></li>
+                  <li><a class="dropdown-item" href="#">Home classic</a></li>
+                  <li class="sub-menu-dropdown dropdown position-relative">
+                    <a class="dropdown-item dropdown-toggle " href="#">More options</a>
+                    <ul class=" position-absolute  translate-middle dropdown-menu sub-menu">
+                      <li><a class="dropdown-item" href="#">Submenu 1</a></li>
+                      <li class="dropdown">
+                        <a class="dropdown-item " href="#">Submenu 2</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="#">App download</a></li>
+                </ul>
+              </li>
             </ul>
 
           </div>

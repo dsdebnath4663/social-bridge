@@ -1,7 +1,48 @@
 import CommentSection from "./CommentSection";
+import PhotoPost from "./PhotoPost";
 
 function MainModule() {
-
+  const images = [
+    'https://via.placeholder.com/300',
+    'https://via.placeholder.com/300',
+    'https://via.placeholder.com/300',
+    'https://via.placeholder.com/300',
+    'https://via.placeholder.com/300',
+    'https://via.placeholder.com/300',
+    'https://via.placeholder.com/300',
+    'https://via.placeholder.com/300', 'https://via.placeholder.com/300',
+    'https://via.placeholder.com/300',
+    'https://via.placeholder.com/300',
+    'https://via.placeholder.com/300', 'https://via.placeholder.com/300',
+    'https://via.placeholder.com/300',
+    'https://via.placeholder.com/300',
+    'https://via.placeholder.com/300', 'https://via.placeholder.com/300',
+    'https://via.placeholder.com/300',
+    'https://via.placeholder.com/300',
+    'https://via.placeholder.com/300', 'https://via.placeholder.com/300',
+    'https://via.placeholder.com/300',
+    'https://via.placeholder.com/300',
+    'https://via.placeholder.com/300', 'https://via.placeholder.com/300',
+    'https://via.placeholder.com/300',
+    'https://via.placeholder.com/300',
+    'https://via.placeholder.com/300', 'https://via.placeholder.com/300',
+    'https://via.placeholder.com/300',
+    'https://via.placeholder.com/300',
+    'https://via.placeholder.com/300', 'https://via.placeholder.com/300',
+    'https://via.placeholder.com/300',
+    'https://via.placeholder.com/300',
+    'https://via.placeholder.com/300', 'https://via.placeholder.com/300',
+    'https://via.placeholder.com/300',
+    'https://via.placeholder.com/300',
+    'https://via.placeholder.com/300', 'https://via.placeholder.com/300',
+    'https://via.placeholder.com/300',
+    'https://via.placeholder.com/300',
+    'https://via.placeholder.com/300', 'https://via.placeholder.com/300',
+    'https://via.placeholder.com/300',
+    'https://via.placeholder.com/300',
+    'https://via.placeholder.com/300',
+    // Add more image URLs
+  ];
 
   return (
     <main>
@@ -366,11 +407,47 @@ function MainModule() {
 
                 <CommentSection />
 
+                <PhotoPost images={images} />
 
               </div>
             </div>
           </div>
-          <div className="col-lg-3 d-none d-lg-block">right Column
+          <div className="col-lg-3 d-none d-lg-block">
+
+            <div class="card" >
+              <div class="card-body">
+                <h5 class="card-title">
+                  <p class="fw-bolder fs-5  ">Who to follow
+                  </p>
+                </h5>
+
+                <div class="d-flex">
+                  <div class="p-2">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzTODhj3Ap6bYRSRCMNKix7E9xY2dvdHyZPQ&amp;s" class=" rounded-circle  icon-md" alt="..." />
+                  </div>
+                  <div class="py-2 flex-grow-1">
+                    <p class="fw-bolder  mb-0">Rabiul Sk </p>
+                    <small class=" opacity-50 font">Web Developer</small>
+                  </div>
+                  <div class="icon-md">
+                    <button class="btn btn-outline-primary border border-0 btn-light rounded-circle" type="button">
+                      <i class="bi bi-plus-lg "></i>
+                    </button>
+                  </div>
+                </div>
+
+
+
+                <div class="d-grid gap-2">
+                  <button class="btn btn-outline-primary border border-0 btn-light" type="button">View More</button>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
           </div>{" "}
           {/* Hidden on mobile */}
         </div>

@@ -44,6 +44,26 @@
   .offcanvas.offcanvas-start {
     border: none !important;
   }
+  .position-relative-desktop {
+    position: relative;
+  }
+
+  .position-absolute-desktop {
+    position: absolute;
+  }
+  .translate-middle-desktop {
+    transform: translate(-50%, -50%) !important;
+  }
+  .dropdown .sub-menu {
+    margin-left: 240px !important;
+    top: 45px;
+    display: none !important;
+  }
+
+  .sub-menu-dropdown:hover .sub-menu {
+    display: block !important;
+    content: "2";
+  }
 }
 
 @media (max-width: 991px) {
