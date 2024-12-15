@@ -5,6 +5,7 @@ import FeedPost from "./feed/FeedPost";
 import FeedHeader from "./feed/FeedHeader";
 import "./feed/feed.css";
 import "./feed/feed-mobile.css";
+import Profile from "./feed/Profile";
 function Feed() {
   return (
     <main>
@@ -123,112 +124,44 @@ function Feed() {
                     <li class="nav-item">
                       <a
                         class="nav-link px-3 fw-semibold active"
-                        id="home-tab"
+                        id="post-tab"
                         data-bs-toggle="tab"
-                        data-bs-target="#home"
+                        data-bs-target="#post"
                         type="button"
                         role="tab"
-                        aria-controls="home"
+                        aria-controls="post"
                         aria-selected="true"
                       >
                         Post
                       </a>
                     </li>
+                    {/* Post
+About
+Connections230
+Media
+Videos
+Events
+Activity 
+
+   Connections
+                        <span class="badge bg-success bg-opacity-10 text-success  ms-1">
+                          {" "}
+                          230
+                        </span>*/}
                     <li class="nav-item">
                       <a
-                        class="nav-link px-3 fw-semibold"
-                        id="home-tab"
-                        data-bs-toggle="tab"
-                        data-bs-target="#home"
-                        type="button"
-                        role="tab"
-                        aria-controls="about"
-                        aria-selected="true"
-                      >
-                        About{" "}
+                        class="nav-link px-3 fw-semibold " id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">
+                        About
                       </a>
                     </li>
-                    <li class="nav-item" p-1>
+                    <li class="nav-item">
                       <a
-                        class="nav-link px-3 fw-semibold"
-                        id="home-tab"
-                        data-bs-toggle="tab"
-                        data-bs-target="#home"
-                        type="button"
-                        role="tab"
-                        aria-controls=" connections "
-                        aria-selected="true"
-                      >
-                        {" "}
+                        class="nav-link px-3 fw-semibold " id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">
                         Connections
                         <span class="badge bg-success bg-opacity-10 text-success  ms-1">
                           {" "}
                           230
                         </span>
-                      </a>
-                    </li>
-
-                    <li class="nav-item">
-                      <a
-                        class="nav-link px-3 fw-semibold"
-                        id="home-tab"
-                        data-bs-toggle="tab"
-                        data-bs-target="#home"
-                        type="button"
-                        role="tab"
-                        aria-controls=" media"
-                        aria-selected="true"
-                      >
-                        {" "}
-                        Media{" "}
-                      </a>
-                    </li>
-
-                    <li class="nav-item">
-                      <a
-                        class="nav-link px-3 fw-semibold"
-                        id="home-tab"
-                        data-bs-toggle="tab"
-                        data-bs-target="#home"
-                        type="button"
-                        role="tab"
-                        aria-controls=" videos"
-                        aria-selected="true"
-                      >
-                        {" "}
-                        Videos{" "}
-                      </a>
-                    </li>
-
-                    <li class="nav-item">
-                      <a
-                        class="nav-link px-3 fw-semibold"
-                        id="home-tab"
-                        data-bs-toggle="tab"
-                        data-bs-target="#home"
-                        type="button"
-                        role="tab"
-                        aria-controls=" Events"
-                        aria-selected="true"
-                      >
-                        {" "}
-                        Events{" "}
-                      </a>
-                    </li>
-
-                    <li class="nav-item">
-                      <a
-                        class="nav-link px-3 fw-semibold"
-                        id="home-tab"
-                        data-bs-toggle="tab"
-                        data-bs-target="#home"
-                        type="button"
-                        role="tab"
-                        aria-controls=" activity"
-                        aria-selected="true"
-                      >
-                        {" "}
-                        Activity{" "}
                       </a>
                     </li>
                   </ul>
@@ -241,9 +174,9 @@ function Feed() {
               <div class="tab-content" id="myTabContent">
                 <div
                   class="tab-pane fade show active"
-                  id="home"
+                  id="post"
                   role="tabpanel"
-                  aria-labelledby="home-tab"
+                  aria-labelledby="post-tab"
                 >
                   <FeedPost />
                 </div>
@@ -253,7 +186,7 @@ function Feed() {
                   role="tabpanel"
                   aria-labelledby="profile-tab"
                 >
-                  <h1>About</h1>
+                  <Profile />
                 </div>
                 <div
                   class="tab-pane fade"
