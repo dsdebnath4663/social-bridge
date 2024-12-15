@@ -1,0 +1,12 @@
+/* Apply the  effect for larger screens (desktop/laptop) */
+@media (min-width: 768px) {
+  .feed-icon-rounded-circle {
+    height: 8rem;
+    width: 8rem;
+    padding: 0.1rem;
+  }
+}
+
+/* This targets devices smaller than 992px (tablets, mobiles) */
+@media (max-width: 991px) {
+}

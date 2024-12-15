@@ -48,3 +48,12 @@
   border: none !important; /* Removes the border */
   background: none !important; /* Ensures no background color is visible */
 }
+
+.feed-pp-container {
+  margin-top: -80px;
+}
+.feed-icon-rounded-circle {
+  height: 5.125rem;
+  width: 5.125rem;
+  padding: 0.1rem;
+}
