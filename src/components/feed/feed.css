@@ -34,12 +34,6 @@
   padding-bottom: 0.95rem !important; */
 }
 
-.feed-nav-underline .nav-link:hover {
-  color: var(--bs-nav-link-color) !important;
-
-  border-bottom: 0.19rem solid transparent !important;
-}
-
 .nav-underline {
   gap: 0rem !important;
 }
