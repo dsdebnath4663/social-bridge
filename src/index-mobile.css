@@ -144,6 +144,12 @@
   background-repeat: no-repeat;
   height: 50px;
 }
+.feed-bg-img-mh-100 {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 200px;
+}
 
 .profile-pic img {
   height: 4rem;

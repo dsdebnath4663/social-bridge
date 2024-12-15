@@ -1,0 +1,50 @@
+.edit-profile-btn {
+  height: 38px;
+}
+
+.flex-align-right-top {
+  margin-right: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.btn-danger {
+  --bs-btn-color: #bb2d3b !important;
+  --bs-btn-bg: #dc35452e !important;
+  --bs-btn-border-color: #dc354508 !important;
+  --bs-btn-hover-color: #fff !important;
+  font-weight: 600 !important;
+}
+
+.border-card {
+  border: var(--bs-card-border-width) solid var(--bs-card-border-color);
+  border-radius: var(--bs-card-border-radius);
+}
+
+.feed-nav-underline .nav-link.active {
+  color: var(--bs-nav-link-color) !important;
+  border-bottom: 0.19rem solid var(--bs-nav-link-color) !important;
+}
+
+.feed-nav-underline .nav-link {
+  /* color: var(--bs-nav-underline-link-active-color); */
+  color: #2b2f32d1 !important;
+  /* padding-top: 0.95rem !important;
+  padding-bottom: 0.95rem !important; */
+}
+
+.feed-nav-underline .nav-link:hover {
+  color: var(--bs-nav-link-color) !important;
+
+  border-bottom: 0.19rem solid transparent !important;
+}
+
+.nav-underline {
+  gap: 0rem !important;
+}
+
+.dropdown-toggle::after {
+  border: none !important; /* Removes the border */
+  background: none !important; /* Ensures no background color is visible */
+}

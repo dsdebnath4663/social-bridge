@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 
 import Landing from './components/Landing';
 import HeaderModule from './components/HeaderModule';
+import Feed from './components/Feed';
 function App() {
   const Home = () => {
     return <h1 className='mt-5 text-center'>Home Page</h1>;
@@ -48,7 +49,8 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/feed" element={<Landing />} />
+          <Route path="/default-home" element={<Landing />} />
+          <Route path="/feed" element={<Feed />} />
           <Route path="/about" element={<About />} />
           <Route path="/connections" element={<Connections />} />
           <Route path="/media" element={<Media />} />

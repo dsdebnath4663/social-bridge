@@ -16,7 +16,7 @@ function HeaderModule() {
     <header className="navbar-light fixed-top header-static">
       <nav className="navbar navbar-expand-lg bg-white">
         <div className="container">
-          <a className="btn btn-primary me-2" href="#" role="button"><i className="bi bi-megaphone-fill"></i></a>
+          <a className="btn btn-primary me-2" href="/default-home" role="button"><i className="bi bi-megaphone-fill"></i></a>
 
           <a className="btn bg-light navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded={isNavOpen ? "true" : "false"} aria-label="Toggle navigation" onClick={handleToggle} // Handle toggle click
           >
@@ -54,7 +54,7 @@ function HeaderModule() {
 
                     </ul>
                   </li>
-                  <li><a className="dropdown-item" href="#">Home post</a></li>
+                  <li><a className="dropdown-item" href="/default-home">Home post</a></li>
 
 
                 </ul>
