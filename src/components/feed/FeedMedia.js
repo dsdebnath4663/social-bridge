@@ -3,11 +3,10 @@ import React from 'react';
 import "./feed.css"
 import "./feed.css"
 
-
-function Profile() {
+function FeedMedia() {
   return (
-    <h1>Profile</h1>
+    <h1>FeedMedia</h1>
   );
 }
 
-export default Profile;
+export default FeedMedia;

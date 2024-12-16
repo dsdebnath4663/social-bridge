@@ -3,11 +3,10 @@ import React from 'react';
 import "./feed.css"
 import "./feed.css"
 
-
-function Profile() {
+function FeedVideos() {
   return (
-    <h1>Profile</h1>
+    <h1>FeedVideos</h1>
   );
 }
 
-export default Profile;
+export default FeedVideos;

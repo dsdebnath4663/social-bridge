@@ -6,6 +6,9 @@ import FeedHeader from "./feed/FeedHeader";
 import "./feed/feed.css";
 import "./feed/feed-mobile.css";
 import Profile from "./feed/Profile";
+
+import FeedActivity from "./feed/FeedActivity";
+
 function Feed() {
   return (
     <main>
@@ -135,28 +138,32 @@ function Feed() {
                         Post
                       </a>
                     </li>
-                    {/* Post
-About
-Connections230
-Media
-Videos
-Events
-Activity 
 
-   Connections
-                        <span class="badge bg-success bg-opacity-10 text-success  ms-1">
-                          {" "}
-                          230
-                        </span>*/}
                     <li class="nav-item">
                       <a
-                        class="nav-link px-3 fw-semibold " id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">
+                        class="nav-link px-3 fw-semibold "
+                        id="profile-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#profile"
+                        type="button"
+                        role="tab"
+                        aria-controls="profile"
+                        aria-selected="false"
+                      >
                         About
                       </a>
                     </li>
                     <li class="nav-item">
                       <a
-                        class="nav-link px-3 fw-semibold " id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">
+                        class="nav-link px-3 fw-semibold "
+                        id="connections-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#connections"
+                        type="button"
+                        role="tab"
+                        aria-controls="connections"
+                        aria-selected="false"
+                      >
                         Connections
                         <span class="badge bg-success bg-opacity-10 text-success  ms-1">
                           {" "}
@@ -164,6 +171,69 @@ Activity
                         </span>
                       </a>
                     </li>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link px-3 fw-semibold "
+                        id="media-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#media"
+                        type="button"
+                        role="tab"
+                        aria-controls="media"
+                        aria-selected="false"
+                      >
+                        Media
+                      </a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a
+                        class="nav-link px-3 fw-semibold "
+                        id="videos-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#videos"
+                        type="button"
+                        role="tab"
+                        aria-controls="videos
+"
+                        aria-selected="false"
+                      >
+                        Videos
+                      </a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a
+                        class="nav-link px-3 fw-semibold "
+                        id="events-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#events"
+                        type="button"
+                        role="tab"
+                        aria-controls="events
+"
+                        aria-selected="false"
+                      >
+                        Events
+                      </a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a
+                        class="nav-link px-3 fw-semibold "
+                        id="activity-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#activity"
+                        type="button"
+                        role="tab"
+                        aria-controls="activity
+"
+                        aria-selected="false"
+                      >
+                        Activity
+                      </a>
+                    </li>
+
                   </ul>
                 </div>
               </>
@@ -190,11 +260,44 @@ Activity
                 </div>
                 <div
                   class="tab-pane fade"
-                  id="contact"
+                  id="connections"
                   role="tabpanel"
-                  aria-labelledby="contact-tab"
+                  aria-labelledby="connections-tab"
                 >
-                  <h1></h1>
+                  <h1>connections </h1>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="media"
+                  role="tabpanel"
+                  aria-labelledby="media-tab"
+                >
+                  <h1>Media </h1>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="videos"
+                  role="tabpanel"
+                  aria-labelledby="videos-tab"
+                >
+                  <h1>Videos</h1>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="events"
+                  role="tabpanel"
+                  aria-labelledby="events-tab"
+                >
+                  <h1>Events</h1>
+                </div>
+
+                <div
+                  class="tab-pane fade"
+                  id="activity"
+                  role="tabpanel"
+                  aria-labelledby="activity-tab"
+                >
+                  <h1>Activity</h1>
                 </div>
               </div>
             </div>

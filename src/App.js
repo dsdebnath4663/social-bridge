@@ -6,6 +6,10 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Landing from './components/Landing';
 import HeaderModule from './components/HeaderModule';
 import Feed from './components/Feed';
+import DropdownTabs from './components/feed/DropdownTabs';
+
+
+
 function App() {
   const Home = () => {
     return <h1 className='mt-5 text-center'>Home Page</h1>;
@@ -60,6 +64,8 @@ function App() {
 
         </Routes>
       </Router>
+
+
     </div>
   );
 }
