@@ -77,7 +77,7 @@ function FeedLayoutRightBar() {
           <div
             class="row justify-content-center gx-0"
           >
-            <div class="col-6 justify-content-center  text-center  ">
+            <div class="col-6 justify-content-center  text-center  " data-bs-toggle="modal" data-bs-target="#exampleModal">
               <img src="https://editaphotography.in/blog/wp-content/uploads/2018/01/best_children_photographer_Pune-2000x1200.jpg" class="img-thumbnail border border-0 px-1 py-1 img-avatar" alt="..." />
 
             </div>
@@ -102,6 +102,29 @@ function FeedLayoutRightBar() {
 
 
           </div>
+
+
+          {/* <!-- Modal start --> */}
+          <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header-removed">
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  Hello
+                  <img src="https://editaphotography.in/blog/wp-content/uploads/2018/01/best_children_photographer_Pune-2000x1200.jpg" class="img-thumbnail " alt="..." />
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+          {/* <!-- Modal End--> */}
+
+
+
+
         </div>
       </div>
 

@@ -74,3 +74,35 @@
   height: 116px !important; /* Adjust as per your need */
   border-radius: 8px !important;
 }
+
+.modal-content {
+  background-color: transparent !important;
+  border: none !important;
+}
+
+/* Position the close button at the top-right corner of the page */
+.modal .btn-close {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1055; /* Ensure it appears above the modal backdrop */
+}
+/* Change the color of the close button */
+.modal .btn-close {
+  background-color: white; /* Change this to your desired color */
+  border: 2px solid white; /* Optional: Border color */
+  border-radius: 50%; /* Makes it circular */
+  opacity: 1; /* Fully visible */
+}
+
+/* Change the icon color (default 'X') */
+.modal .btn-close::before {
+  color: white; /* Change the color of the 'X' */
+}
+
+/* Hover and focus states for the close button */
+.modal .btn-close:hover,
+.modal .btn-close:focus {
+  background-color: white; /* Slightly darker color on hover */
+  border-color: white;
+}
