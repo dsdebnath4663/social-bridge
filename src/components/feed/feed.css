@@ -51,3 +51,26 @@
   width: 5.125rem;
   padding: 0.1rem;
 }
+
+.btn-xsm {
+  --bs-btn-padding-y: 0.25rem !important;
+  --bs-btn-padding-x: 0.5rem !important;
+  --bs-btn-font-size: 0.75rem !important;
+  /* background-color: rgba(15, 111, 236, 0.1) !important; */
+}
+
+.img-avatar {
+  object-fit: cover !important;
+  object-position: center center !important; /* Adjust this to focus on a specific part of the image */
+  width: 200px !important; /* Adjust as per your need */
+  height: 200px !important; /* Adjust as per your need */
+  border-radius: 8px !important;
+}
+
+.img-avatar-sm {
+  object-fit: cover !important;
+  object-position: center center !important; /* Adjust this to focus on a specific part of the image */
+  width: 200px !important; /* Adjust as per your need */
+  height: 116px !important; /* Adjust as per your need */
+  border-radius: 8px !important;
+}

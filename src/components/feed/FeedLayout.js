@@ -2,6 +2,7 @@ import React, { useCallback } from 'react';
 import { Link, useLocation, Outlet, useNavigate } from "react-router-dom";
 import TabHeader from './TabHeader';
 import { useState, useEffect } from 'react';
+import FeedLayoutRightBar from './FeedLayoutRightBar';
 
 
 
@@ -42,6 +43,10 @@ const FeedLayout = () => {
         <div className="col-lg-4">
           {/* <h1>Right sidebar content</h1>     */}
           <h1> {activeTab}</h1>
+
+
+          <FeedLayoutRightBar />
+
 
         </div>
       </div>

@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  background-color: rgba(15, 111, 236, 0.1) !important;
 }
 
 .bg-body-tertiary {
