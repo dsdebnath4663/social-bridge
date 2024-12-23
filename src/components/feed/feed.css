@@ -38,9 +38,11 @@
   gap: 0rem !important;
 }
 
-.dropdown-toggle::after {
-  border: none !important; /* Removes the border */
-  background: none !important; /* Ensures no background color is visible */
+.remove.dropdown-toggle::after {
+  border: none !important;
+   /* Removes the border */
+  /* background: none !important;  */
+  /* Ensures no background color is visible */
 }
 
 .feed-pp-container {
@@ -48,6 +50,12 @@
 }
 .feed-icon-rounded-circle {
   height: 5.125rem;
+  width: 5.125rem;
+  padding: 0.1rem;
+}
+
+.feed-icon-rounded-circle-two {
+  height: 3.125rem;
   width: 5.125rem;
   padding: 0.1rem;
 }
@@ -74,7 +82,14 @@
   height: 116px !important; /* Adjust as per your need */
   border-radius: 8px !important;
 }
+.avatar-xxs {
+  height: 1.5rem;
+  width: 1.5rem;
+}
 
+.flex-avatar-overlap {
+  margin-right: -1rem;
+}
 .modal-content {
   background-color: transparent !important;
   border: none !important;
@@ -105,4 +120,32 @@
 .modal .btn-close:focus {
   background-color: white; /* Slightly darker color on hover */
   border-color: white;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background: black;
+}
+
+.carousel-control-prev-fixed-position {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.dropdown .btn:focus,
+.dropdown .btn:active {
+  outline: none !important;
+  box-shadow: none !important; /* Removes any focus shadow */
+  border-color: transparent !important; /* Makes the border transparent */
+}
+/* .nav-link:hover {
+  color: red !important;
+} */
+
+/* Remove hover effects on <li> elements */
+.dropdown-item.fw-semibold:hover {
+  background-color: transparent !important; /* Remove background change */
+  color: rgb(13 110 253) !important; /* Retain original text color */
 }

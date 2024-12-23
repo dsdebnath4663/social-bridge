@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react';
 import { Link } from 'react-router-dom';
-
+import "./header/header.css"
 function HeaderModule() {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
@@ -41,43 +41,100 @@ function HeaderModule() {
                 <i className="bi bi-search"></i>
               </button>
             </form>
-            <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li className="nav-item dropdown border-btm custom-li">
-                <Link
-                  className="nav-link dropdown-toggle fw-semibold"
-                  to="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Pages
-                </Link>
-                <ul className="dropdown-menu bg-white border-0 shadow-sm p-3 mb-5 rounded">
-                  <li className="sub-menu-dropdown dropdown position-relative-desktop">
-                    <Link
-                      className="dropdown-item dropdown-toggle 1nav-link dropdown-toggle fw-semibold"
-                      to="#"
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                      onClick={handleSubmenuClick}
-                    >
-                      Profile
-                    </Link>
-                    <ul className="position-absolute-desktop translate-middle-desktop dropdown-menu sub-menu bg-white border-0 shadow-sm p-3 mb-5 rounded">
-                      <li><Link className="dropdown-item" to="/feed/home">Feed</Link></li>
-                      <li><Link className="dropdown-item" to="/feed/about">About</Link></li>
-                      <li><Link className="dropdown-item" to="/feed/connections">Connections</Link></li>
-                      <li><Link className="dropdown-item" to="/feed/media">Media</Link></li>
-                      <li><Link className="dropdown-item" to="/feed/videos">Videos</Link></li>
-                      <li><Link className="dropdown-item" to="/feed/events">Events</Link></li>
-                      <li><Link className="dropdown-item" to="/feed/activity">Activity</Link></li>
-                    </ul>
-                  </li>
-                  <li><Link className="dropdown-item" to="/default-home">Home post</Link></li>
-                </ul>
-              </li>
-            </ul>
+
+
+            <div class="d-flex flex-row-reverse ms-auto">
+
+              <ul className="navbar-nav  mb-2 mb-lg-0">
+                <li className="nav-item dropdown border-btm custom-li">
+                  <Link
+                    className="nav-link dropdown-toggle fw-semibold"
+                    to="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Pages
+                  </Link>
+
+
+                  <ul className="dropdown-menu bg-white border-0 shadow-sm p-3 mb-5 rounded">
+                    <li className="sub-menu-dropdown dropdown position-relative-desktop">
+                      <Link
+                        className="dropdown-item dropdown-toggle 1nav-link dropdown-toggle fw-semibold"
+                        to="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        onClick={handleSubmenuClick}
+                      >
+                        Profile
+                      </Link>
+                      <ul className="position-absolute-desktop translate-middle-desktop dropdown-menu sub-menu bg-white border-0 shadow-sm p-3 mb-5 rounded">
+                        <li><Link className="dropdown-item dropdown-toggle nav-link dropdown-toggle fw-semibold" to="/feed/home">Feed</Link></li>
+                        <li><Link className="dropdown-item dropdown-toggle nav-link dropdown-toggle fw-semibold" to="/feed/about">About</Link></li>
+                        <li><Link className="dropdown-item dropdown-toggle nav-link dropdown-toggle fw-semibold" to="/feed/connections">Connections</Link></li>
+                        <li><Link className="dropdown-item dropdown-toggle nav-link dropdown-toggle fw-semibold" to="/feed/media">Media</Link></li>
+                        <li><Link className="dropdown-item dropdown-toggle nav-link dropdown-toggle fw-semibold" to="/feed/videos">Videos</Link></li>
+                        <li><Link className="dropdown-item dropdown-toggle nav-link dropdown-toggle fw-semibold" to="/feed/events">Events</Link></li>
+                        <li><Link className="dropdown-item dropdown-toggle nav-link dropdown-toggle fw-semibold" to="/feed/activity">Activity</Link></li>
+                      </ul>
+                    </li>
+                    {/* <li><Link className="dropdown-item dropdown-toggle nav-link dropdown-toggle fw-semibold"  to="/default-home">Authentication</Link> */}
+
+                    <li><Link className="dropdown-item dropdown-toggle nav-link dropdown-toggle fw-semibold" to="/default-home">Home post</Link></li>
+                  </ul>
+                </li>
+              </ul>
+              <ul className="navbar-nav  mb-2 mb-lg-0">
+                <li className="nav-item dropdown border-btm custom-li">
+                  <Link
+                    className="nav-link dropdown-toggle fw-semibold"
+                    to="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Account
+                  </Link>
+
+
+                  <ul className="dropdown-menu bg-white border-0 shadow-sm p-3 mb-5 rounded">
+                    <li className="sub-menu-dropdown dropdown position-relative-desktop">
+                      <Link
+                        className="dropdown-item dropdown-toggle nav-link dropdown-toggle fw-semibold"
+                        to="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        onClick={handleSubmenuClick}
+                      >
+                        Authentication
+                      </Link>
+                      <ul className="position-absolute-desktop translate-middle-desktop dropdown-menu sub-menu bg-white border-0 shadow-sm p-3 mb-5 rounded">
+
+                        <li>
+                          <Link className="dropdown-item remove dropdown-toggle nav-link dropdown-toggle fw-semibold" to="/authentication/sign-in">Sign In</Link>
+                        </li>
+                        <li>
+                          <Link className="dropdown-item remove dropdown-toggle nav-link dropdown-toggle fw-semibold" to="/authentication/sign-up">Sign Up</Link>
+                        </li>
+
+                        <li>
+                          <Link className="dropdown-item remove dropdown-toggle nav-link dropdown-toggle fw-semibold" to="/authentication/forgot-password">Forgot Password</Link>
+                        </li>
+                      </ul>
+                    </li>
+
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+
+
+
+
           </div>
 
           <ul className="navbar-nav ms-auto mb-lg-0 hstack gap-2 gap-xl-3 justify-content-center">
