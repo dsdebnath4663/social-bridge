@@ -1,0 +1,429 @@
+import React, { useRef, useState } from "react";
+import "./messaging.css";
+import MessagingModal from "./MessagingModal";
+
+const Messaging = () => {
+
+  const messages = [
+    {
+      sender: "user",
+      text: "Applauded no discovery in newspaper allowance am northward😊",
+      time: "2:30 PM",
+      seen: true,
+    },
+    {
+      sender: "receiver",
+      text: "I'm good! Thanks for asking. How about you?",
+      time: "2:35 PM",
+      seen: false,
+    },
+    {
+      sender: "user",
+      text: "I'm doing well, just been busy with work. Here's a picture of the sunset I saw earlier today!",
+      time: "2:40 PM",
+      seen: true,
+      image: "https://placehold.co/200",
+    },
+    {
+      sender: "receiver",
+      text: "Wow, that's beautiful! Where did you take this photo?",
+      time: "2:45 PM",
+      seen: false,
+    },
+    {
+      sender: "user",
+      text: "I took it from my backyard. It was the perfect moment, had to capture it.",
+      time: "2:50 PM",
+      seen: true,
+    },
+  ];
+  const [activeMessage, setActiveMessage] = useState(null);
+
+  const handleActiveMessage = (messageId) => {
+    setActiveMessage(messageId);
+  };
+
+  const openModalRef = useRef(null);
+
+  const handleOpenModal = (callback) => {
+    openModalRef.current = callback;
+  };
+
+  const openModalFromAnotherComponent = () => {
+    if (openModalRef.current) {
+      openModalRef.current();
+    }
+  };
+
+
+
+  return (
+    <div className="container ">
+
+      <div className="row g-4 my-5 ">
+        <a
+          class="btn btn-primary"
+          data-bs-toggle="offcanvas"
+          F
+          href="#offcanvasExample"
+          role="button"
+          aria-controls="offcanvasExample"
+        >
+          Link with href
+        </a>
+        <div className="col-lg-3 vstack gap-4">
+          <div class="card ">
+            <div class="card-header bg-white">
+              <div class="d-flex justify-content">
+                <div class="p-2 flex-fill ">
+                  <button type="button" class="btn btn-white">
+                    Notifications <span class="badge text-bg-primary">4</span>
+                  </button>
+                </div>
+                <div class="p-2  ">
+                  <button
+                    type="button"
+                    class="btn btn-primary ms-auto rounded-circle"
+                    onClick={openModalFromAnotherComponent}
+                  >
+                    edit
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className="card-body  ">
+              <div class=" flex-grow-1 ps-1">
+                <form
+                  class="d-flex position-relative form-padding"
+                  role="search"
+                >
+                  <input
+                    class="form-control ps-5 bg-light"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                  />
+                  <button
+                    class="btn position-absolute top-0 end-0"
+                    type="submit"
+                  >
+                    <i class="bi bi-search"></i>
+                  </button>
+                </form>
+              </div>
+
+
+              <div class="list-group custom-scroll overflow-auto ps-1 mt-2">
+                <ul class="list-group">
+                  {/* <!-- Contact 1 --> */}
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center">
+                      {/* <!-- Story Circle --> */}
+                      <div class="position-relative me-3">
+                        <img src="https://placehold.co/400" class="rounded-circle profile-img" alt="user1" />
+                        <span class="position-absolute bottom-0 end-0 translate-middle p-1 bg-success border border-light rounded-circle status-indicator"></span>
+                      </div>
+                      <div>
+                        <p class="mb-0">User 1</p>
+                        <small class="text-muted">Last message...</small>
+                      </div>
+                    </div>
+                  </li>
+
+                  {/* <!-- Contact 2 --> */}
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center">
+                      {/* <!-- Story Circle --> */}
+                      <div class="position-relative me-3">
+                        <img src="https://placehold.co/400" class="rounded-circle profile-img" alt="user2" />
+                        <span class="position-absolute bottom-0 end-0 translate-middle p-1 bg-secondary border border-light rounded-circle status-indicator"></span>
+                      </div>
+                      <div>
+                        <p class="mb-0">User 2</p>
+                        <small class="text-muted">Last message...</small>
+                      </div>
+                    </div>
+                  </li>
+
+                  {/* <!-- Contact 3 --> */}
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center">
+                      {/* <!-- Story Circle --> */}
+                      <div class="position-relative me-3">
+                        <img src="https://placehold.co/400" class="rounded-circle profile-img" alt="user3" />
+                        <span class="position-absolute bottom-0 end-0 translate-middle p-1 bg-danger border border-light rounded-circle status-indicator"></span>
+                      </div>
+                      <div>
+                        <p class="mb-0">User 3</p>
+                        <small class="text-muted">Last message...</small>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col-lg-9 vstack gap-4">
+
+          <div
+            class="offcanvas offcanvas-start"
+            tabindex="-1"
+            id="offcanvasExample"
+            aria-labelledby="offcanvasExampleLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasExampleLabel">
+                Offcanvas
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <div>
+                Some text as placeholder. In real life you can have the elements
+                you have chosen. Like, text, images, lists, etc.
+              </div>
+              <div class="dropdown mt-3">
+                <button
+                  class="btn btn-secondary dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                >
+                  Dropdown button
+                </button>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Action
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Another action
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Something else here
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="card text-center">
+            <div class="card-header bg-white">
+              <div class="d-flex flex-wrap">
+                <div class=" flex-grow-1">
+                  <div class="d-flex">
+                    <div class="p-2">
+                      <a
+                        class="btn bg-light icon-md p-0"
+                        href="/messaging"
+                        data-discover="true"
+                      >
+                        <img
+                          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjZirTv3YUaHSe-VVIQzwXUHXxb8mnJ-krbg&amp;s"
+                          class="rounded-circle"
+                          alt="User Profile"
+                        />
+                      </a>
+                    </div>
+
+                    <div class=" flex-shrink-1">
+                      <p class="fw-bolder  mb-0 mt-2">Judy Nguyen</p>
+                      <div class="d-flex align-items-center mt-0 lh-1">
+                        <span class="position-relative me-2 ms-1">
+                          <span class="bg-success rounded-circle border border-light position-absolute online"
+                          >
+                          </span>
+                        </span>
+                        <span className="fs-6 ms-1">Online</span>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="p-2 flex-shrink-1">
+                  <div class="d-flex">
+                    <ul class="navbar-nav ms-auto mb-lg-0 hstack gap-2 gap-xl-3 justify-content-center">
+                      <li class="nav-item dropdown">
+                        <a
+                          class="btn bg-light"
+                          href="/messaging"
+                          data-discover="true"
+                        >
+                          <i class="bi bi-chat-left-text-fill"></i>
+                        </a>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a
+                          class="btn bg-light"
+                          href="/messaging"
+                          data-discover="true"
+                        >
+                          <i class="bi bi-gear"></i>
+                        </a>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a
+                          class="btn bg-light"
+                          href="/messaging"
+                          data-discover="true"
+                        >
+                          <i class="bi bi-megaphone-fill"></i>
+                          <span class="position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle bg-danger p-2">
+                            <span class="visually-hidden">unread messages</span>
+                          </span>
+                        </a>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a
+                          class="btn bg-light icon-md p-0"
+                          href="/messaging"
+                          data-discover="true"
+                        >
+                          <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjZirTv3YUaHSe-VVIQzwXUHXxb8mnJ-krbg&amp;s"
+                            class="rounded-2"
+                            alt="User Profile"
+                          />
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div className="card-body custom-scroll overflow-auto">
+              <ul className="list-unstyled">
+                {messages.map((message, index) => (
+                  <div key={index}>
+                    {message.image ? (
+                      // Keep the original structure for Image Message
+                      <li className="d-flex mb-3">
+                        <div className="d-flex align-items-center flex-column">
+                          <img
+                            src="https://placehold.co/50"
+                            alt="User"
+                            className="rounded-circle me-2"
+                          />
+                        </div>
+                        <div className="d-flex align-items-center ms-2">
+                          <img
+                            src={message.image}
+                            alt="Image Message"
+                            className="img-fluid rounded-3 shadow-sm mt-2"
+                          />
+                        </div>
+                      </li>
+                    ) : (
+                      // Other message types (text-based)
+                      <li
+                        className={`d-flex mb-3 ${message.sender === "receiver" ? "justify-content-end" : ""}`}
+                      >
+                        <div className="d-flex align-items-center">
+                          {/* Render the sender's image */}
+                          <img
+                            src="https://placehold.co/50"
+                            alt={message.sender === "user" ? "User" : "Receiver"}
+                            className={`rounded-circle me-2 ${message.sender === "receiver" ? "ms-2" : ""}`}
+                          />
+
+                          <div>
+                            {/* Render the message */}
+                            <div
+                              className={`bg-${message.sender === "user" ? "primary" : "light"} text-${message.sender === "user" ? "white" : "dark"} p-2 rounded-3 shadow-sm`}
+                            >
+                              {message.text}
+                            </div>
+
+                            {/* Render time and seen status */}
+                            <div
+                              className="text-end mt-1"
+                              style={{ fontSize: "0.75rem", color: "#d1d1d1" }}
+                            >
+                              {message.seen ? (
+                                <i className="bi bi-check-all" style={{ color: "#4caf50" }}></i>
+                              ) : (
+                                <i className="bi bi-check" style={{ color: "#d1d1d1" }}></i>
+                              )}
+                              <span> Seen at {message.time}</span>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    )}
+                  </div>
+                ))}
+              </ul>
+            </div>
+            <div class="card-footer text-body-secondary bg-white">
+              <div class="d-flex flex-wrap ">
+                <div class=" flex-grow-1 ps-1">
+                  <textarea
+                    class="form-control mb-sm-0 mb-3"
+                    data-autoresize=""
+                    placeholder="Type a message"
+                    rows="1"
+                  ></textarea>
+                </div>
+                <div class="p-2 flex-shrink-1">
+                  <div class="d-flex">
+                    <ul class="navbar-nav ms-auto mb-lg-0 hstack gap-2 gap-xl-3 justify-content-center">
+                      <li class="nav-item dropdown text-danger ">
+                        <a
+                          class="btn btn-danger"
+                          href="/messaging"
+                          data-discover="true"
+                        >
+                          <i class="bi bi-emoji-smile-fill"></i>
+                        </a>
+                      </li>
+                      <li class="nav-item dropdown text-dark">
+                        <a
+                          class="btn btn-dark"
+                          href="/messaging"
+                          data-discover="true"
+                        >
+                          <i class="bi bi-paperclip "></i>
+                        </a>
+                      </li>
+                      <li class="nav-item dropdown text-primary">
+                        <a
+                          class="btn btn-primary"
+                          href="/messaging"
+                          data-discover="true"
+                        >
+                          <i class="bi bi-send-fill"></i>
+                          <span class="position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle bg-danger p-2">
+                            <span class="visually-hidden">unread messages</span>
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  {/*  */}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Pass the handleOpenModal function to MessagingModal */}
+      <MessagingModal handleOpenModal={handleOpenModal} />
+    </div>
+  );
+};
+
+export default Messaging;
