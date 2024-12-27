@@ -139,7 +139,7 @@ function HeaderModule() {
 
           <ul className="navbar-nav ms-auto mb-lg-0 hstack gap-2 gap-xl-3 justify-content-center">
             <li className="nav-item dropdown">
-              <Link className="btn bg-light" to="#">
+              <Link className="btn bg-light" to="/messaging">
                 <i className="bi bi-chat-left-text-fill"></i>
               </Link>
             </li>

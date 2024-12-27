@@ -12,6 +12,7 @@ import Authentication from "./components/authentication/Authentication";
 import SignIn from "./components/authentication/SignIn";
 import Register from "./components/authentication/Register";
 import ForgotPassword from "./components/authentication/ForgotPassword";
+import Messaging from "./components/messaging/Messaging";
 
 function App() {
   const Home = () => {
@@ -35,6 +36,8 @@ function App() {
   const Activity = () => {
     return <h1 className="mt-5 text-center">Activity Page</h1>;
   };
+
+
 
   const Profile = () => (
     <div>
@@ -64,16 +67,11 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/default-home" element={<Landing />} />
-
-
           <Route path="/authentication/*" element={<Authentication />}>
             <Route path="sign-in" element={<SignIn />} />
             <Route path="sign-up" element={<Register />} />
             <Route path="forgot-password" element={<ForgotPassword />} />
-
           </Route>
-
-
           <Route path="/feed/*" element={<FeedLayout />}>
             {/* Define the nested routes */}
             <Route path="home" element={<Home />} />
@@ -86,6 +84,9 @@ function App() {
             <Route path="events" element={<Events />} />
             <Route path="activity" element={<Activity />} />
           </Route>
+          <Route path="/messaging" element={<Messaging />} />
+
+
         </Routes>
       </Router>
     </div>

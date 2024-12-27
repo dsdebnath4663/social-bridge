@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
+import '../modal/ImageGalleryWithModal.css'
 function ImageGalleryWithModal() {
   const [selectedImage, setSelectedImage] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(null);
