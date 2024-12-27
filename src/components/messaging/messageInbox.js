@@ -3,25 +3,7 @@ import "./messaging.css";
 import MessageBody from "./MessageBody";
 
 const MessagingInbox = () => {
-  const [messages] = useState([
-    {
-      id: 1,
-      senderName: "Judy Nguyen",
-      senderImg: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjZirTv3YUaHSe-VVIQzwXUHXxb8mnJ-krbg&s",
-      time: "Jul 16, 2022, 06:15 am",
-      content: "Applauded no discovery in newspaper allowance am northward😊",
-      isSentByCurrentUser: false,
-    },
-    {
-      id: 2,
-      senderName: "You",
-      senderImg: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjZirTv3YUaHSe-VVIQzwXUHXxb8mnJ-krbg&s",
-      time: "Jul 16, 2022, 06:30 am",
-      content: "Great job on the report! 👍",
-      isSentByCurrentUser: true,
-    },
-    // Add more messages as needed
-  ]);
+
   return (
     <div class="card text-center">
       <div class="card-header bg-white">

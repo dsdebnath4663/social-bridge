@@ -36,7 +36,7 @@ const messages = [
 ];
 
 
-const MessageComponent = () => {
+const MessageBody = () => {
   return (
     <div className="card-body custom-scroll overflow-auto">
       <ul className="list-unstyled">
@@ -104,4 +104,4 @@ const MessageComponent = () => {
   );
 };
 
-export default MessageComponent;
+export default MessageBody;

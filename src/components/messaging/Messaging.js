@@ -23,17 +23,11 @@ const Messaging = () => {
   };
 
 
-  const messages = [
-    { id: 1, title: "List group item heading", content: "Some placeholder content in a paragraph.", time: "3 days ago" },
-    { id: 2, title: "List group item heading", content: "Some placeholder content in a paragraph.", time: "3 days ago" },
-    { id: 3, title: "List group item heading", content: "Some placeholder content in a paragraph.", time: "3 days ago" },
-    { id: 4, title: "List group item heading", content: "Some placeholder content in a paragraph.", time: "3 days ago" },
-  ];
 
   return (
     <div className="container ">
       <div className="row g-4 my-5 ">
-        <div className="col-lg-4 vstack gap-4">
+        <div className="col-lg-3 vstack gap-4">
           <div class="card ">
             <div class="card-header bg-white">
               <div class="d-flex justify-content">
@@ -76,28 +70,57 @@ const Messaging = () => {
 
 
               <div class="list-group custom-scroll overflow-auto ps-1 mt-2">
-
-                {messages.map((message) => (
-                  <a
-                    key={message.id}
-                    href="#"
-                    className={`list-group-item list-group-item-action ${activeMessage === message.id ? "active" : ""}`}
-                    onClick={() => handleActiveMessage(message.id)}
-                  >
-                    <div className="d-flex w-100 justify-content-between">
-                      <h5 className="mb-1">{message.title}</h5>
-                      <small className={` ${activeMessage !== message.id ? "text-body-secondary" : ""}`}>
-                        {message.time}
-                      </small>
+                <ul class="list-group">
+                  {/* <!-- Contact 1 --> */}
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center">
+                      {/* <!-- Story Circle --> */}
+                      <div class="position-relative me-3">
+                        <img src="https://placehold.co/400" class="rounded-circle profile-img" alt="user1" />
+                        <span class="position-absolute bottom-0 end-0 translate-middle p-1 bg-success border border-light rounded-circle status-indicator"></span>
+                      </div>
+                      <div>
+                        <p class="mb-0">User 1</p>
+                        <small class="text-muted">Last message...</small>
+                      </div>
                     </div>
-                    <p className="mb-1">{message.content}</p>
-                    <small className={` ${activeMessage !== message.id ? "text-body-secondary" : ""}`}>And some muted small print.</small>
-                  </a>
-                ))}
-              </div>            </div>
+                  </li>
+
+                  {/* <!-- Contact 2 --> */}
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center">
+                      {/* <!-- Story Circle --> */}
+                      <div class="position-relative me-3">
+                        <img src="https://placehold.co/400" class="rounded-circle profile-img" alt="user2" />
+                        <span class="position-absolute bottom-0 end-0 translate-middle p-1 bg-secondary border border-light rounded-circle status-indicator"></span>
+                      </div>
+                      <div>
+                        <p class="mb-0">User 2</p>
+                        <small class="text-muted">Last message...</small>
+                      </div>
+                    </div>
+                  </li>
+
+                  {/* <!-- Contact 3 --> */}
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center">
+                      {/* <!-- Story Circle --> */}
+                      <div class="position-relative me-3">
+                        <img src="https://placehold.co/400" class="rounded-circle profile-img" alt="user3" />
+                        <span class="position-absolute bottom-0 end-0 translate-middle p-1 bg-danger border border-light rounded-circle status-indicator"></span>
+                      </div>
+                      <div>
+                        <p class="mb-0">User 3</p>
+                        <small class="text-muted">Last message...</small>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
-        <div className="col-lg-8 vstack gap-4">
+        <div className="col-lg-9 vstack gap-4">
           {/* <a
             class="btn btn-primary"
             data-bs-toggle="offcanvas"
