@@ -1,6 +1,7 @@
 .custom-scroll {
   scrollbar-width: thin; /* For Firefox */
   scrollbar-color: #ccc transparent; /* For Firefox */
+  height: 380px !important;
 }
 
 .custom-scroll::-webkit-scrollbar {
@@ -20,4 +21,12 @@
   bottom: 20px;
   right: 20px;
   width: 18rem;
+}
+
+.online {
+  width: 15px;
+  height: 15px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

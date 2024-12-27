@@ -1,0 +1,68 @@
+import React from "react";
+
+const messages = [
+
+];
+
+const MessageComponent = () => {
+  return (
+    <div className="card-body  custom-scroll overflow-auto  ">
+
+
+      <ul className="list-unstyled">
+        {/* User Message */}
+        <li className="d-flex mb-3">
+          <div className="d-flex align-items-center">
+            <img src="https://placehold.co/50" alt="User" className="rounded-circle me-2" />
+
+            <div>
+              <div className="bg-primary text-white p-2 rounded-3 shadow-sm">
+                Applauded no discovery in newspaper allowance am northward😊
+
+              </div>
+
+              {/* Time Seen with Double Tick and Bootstrap Icon */}
+              <div className="text-end mt-1" style={{ fontSize: '0.75rem', color: '#d1d1d1' }}>
+                <i className="bi bi-check-all" style={{ color: '#4caf50' }}></i> {/* Double Tick Icon */}
+                <span> Seen at 2:30 PM</span>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        {/* Receiver Message */}
+        <li className="d-flex justify-content-end mb-3">
+          <div className="bg-light text-dark p-2 rounded-3 shadow-sm">
+            I'm good! Thanks for asking.
+          </div>
+          <div className="d-flex align-items-center ms-2">
+            <img src="https://placehold.co/50" alt="Receiver" className="rounded-circle" />
+          </div>
+        </li>
+        {/* Image Message */}
+        <li className="d-flex mb-3">
+          <div className="d-flex align-items-center flex-column">
+            <img src="https://placehold.co/50" alt="User" className="rounded-circle me-2" />
+          </div>
+          <div className="d-flex align-items-center ms-2">
+            <img src="https://placehold.co/200" alt="Image Message" className="img-fluid rounded-3 shadow-sm mt-2" />
+          </div>
+
+
+        </li>
+
+
+
+
+      </ul>
+
+
+    </div>
+  );
+};
+
+export default MessageComponent;
+
+
+
+// make it dymaic dont change actual content html css classsname and add randrom conversation text
