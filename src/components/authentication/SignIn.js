@@ -136,7 +136,10 @@ function SignIn() {
 
                   </div>
                   <div class="d-grid gap-2 col-lg-12 btn-group-lg  mx-auto">
-                    <button class="btn btn-primary" type="button">Login</button>
+                    {/* <button class="btn btn-primary" type="button">Login</button> */}
+                    <Link to="/feed/about" className="btn btn-primary" role="button">
+                      Login
+                    </Link>
                   </div>
                   <label class="m-3 ">
                     <span class="opacity-50">©2024</span>

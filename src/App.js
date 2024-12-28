@@ -65,7 +65,7 @@ function App() {
         {/* {!isAuthenticationRoute && <HeaderModule />} */}
 
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<SignIn />} />
           <Route path="/default-home" element={<Landing />} />
           <Route path="/authentication/*" element={<Authentication />}>
             <Route path="sign-in" element={<SignIn />} />

@@ -35,6 +35,8 @@
     animation: customSlideInDown 1s ease-out; /* 1s duration, can adjust for speed */
     opacity: 0; /* Start as invisible */
   }
+
+  /* Start offcanvas sidbar as visible on large screen*/
   .left-bar .offcanvas {
     position: static;
     visibility: visible !important;
@@ -44,6 +46,7 @@
   .offcanvas.offcanvas-start {
     border: none !important;
   }
+
   .position-relative-desktop {
     position: relative;
   }

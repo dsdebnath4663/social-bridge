@@ -73,64 +73,89 @@ const Messaging = () => {
 
   return (
     <div className="container">
-      <div className="row g-4 my-5">
-        <div className="col-lg-3 vstack gap-4">
-          <div className="card">
-            <div className="card-header bg-white">
-              <div className="d-flex justify-content">
-                <div className="p-2 flex-fill">
-                  <button type="button" className="btn btn-white">
-                    Notifications <span className="badge text-bg-primary">4</span>
-                  </button>
-                </div>
-                <div className="p-2">
-                  <button
-                    type="button"
-                    className="btn btn-primary ms-auto rounded-circle"
-                    onClick={openModalFromAnotherComponent}
-                  >
-                    edit
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div className="card-body">
-              <div className="flex-grow-1 ps-1">
-                <form className="d-flex position-relative form-padding" role="search">
-                  <input className="form-control ps-5 bg-light" type="search" placeholder="Search" aria-label="Search" />
-                  <button className="btn position-absolute top-0 end-0" type="submit">
-                    <i className="bi bi-search"></i>
-                  </button>
-                </form>
-              </div>
 
-              <div className="list-group custom-scroll overflow-auto ps-1 mt-2">
-                <ul className="list-group">
-                  {contacts.map((contact) => (
-                    <li
-                      key={contact.id}
-                      className="list-group-item d-flex justify-content-between align-items-center"
-                      onClick={() => handleContactClick(contact)} // Set active contact on click
-                    >
-                      <div className="d-flex align-items-center">
-                        <div className="position-relative me-3">
-                          <img src={contact.image} className="rounded-circle profile-img" alt={contact.name} />
-                          <span className="position-absolute bottom-0 end-0 translate-middle p-1 bg-success border border-light rounded-circle status-indicator"></span>
-                        </div>
-                        <div>
-                          <p className="mb-0">{contact.name}</p>
-                          <small className="text-muted">Last message...</small>
-                        </div>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
+      {/* <i className="bi bi-sliders"></i> */}
+
+
+
+      <div className="row g-4 my-5">
+
+
+        <button class="btn btn-primary  d-md-none   d-lg-none  d-xxl-none d-lg-block d-xl-block" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Enable both scrolling & backdrop</button>
+
+
+
+        {/* Chat Tab started */}
+        <div className="col-lg-3 vstack gap-4 left-bar">
+
+          <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+            <div class="offcanvas-header d-md-none   d-lg-none  d-xxl-none d-lg-block d-xl-block">
+              <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <div className="card">
+                <div className="card-header bg-white">
+                  <div className="d-flex justify-content">
+                    <div className="p-2 flex-fill">
+                      <h6>
+                        Notifications <span className="badge text-bg-primary">4</span>
+                      </h6>
+                    </div>
+                    <div className="p-2">
+                      <button
+                        type="button"
+                        className="btn btn-primary ms-auto rounded-circle"
+                        onClick={openModalFromAnotherComponent}
+                      >
+                        edit
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div className="card-body">
+                  <div className="flex-grow-1 ps-1">
+                    <form className="d-flex position-relative form-padding" role="search">
+                      <input className="form-control ps-5 bg-light" type="search" placeholder="Search" aria-label="Search" />
+                      <button className="btn position-absolute top-0 end-0" type="submit">
+                        <i className="bi bi-search"></i>
+                      </button>
+                    </form>
+                  </div>
+
+                  <div className="list-group custom-scroll overflow-auto ps-1 mt-2">
+                    <ul className="list-group">
+                      {contacts.map((contact) => (
+                        <li
+                          key={contact.id}
+                          className="list-group-item d-flex justify-content-between align-items-center"
+                          onClick={() => handleContactClick(contact)} // Set active contact on click
+                        >
+                          <div className="d-flex align-items-center">
+                            <div className="position-relative me-3">
+                              <img src={contact.image} className="rounded-circle profile-img" alt={contact.name} />
+                              <span className="position-absolute bottom-0 end-0 translate-middle p-1 bg-success border border-light rounded-circle status-indicator"></span>
+                            </div>
+                            <div>
+                              <p className="mb-0">{contact.name}</p>
+                              <small className="text-muted">Last message...</small>
+                            </div>
+                          </div>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div className="col-lg-9 vstack gap-4">
+        </div>
+        {/* Chat Tab ended */}
+
+
+        {/* Chat conversation START  */}
+        <div className="col-lg-9 vstack gap-4 ">
           <div className="card text-center">
             <div className="card-header bg-white">
               <div className="d-flex flex-wrap">
@@ -251,6 +276,8 @@ const Messaging = () => {
             </div>
           </div>
         </div>
+        {/* Chat conversation ended  */}
+
       </div>
 
       <MessagingModal handleOpenModal={handleOpenModal} />
